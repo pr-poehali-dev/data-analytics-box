@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { ProfileSection } from "@/components/ProfileSection"
 import { LinkCard } from "@/components/LinkCard"
 import { SocialFooter } from "@/components/SocialFooter"
-import { Camera, ShieldCheck, Wifi, Satellite, KeyRound, Intercom, Package, MessageCircle, Mail, Send, Phone } from "lucide-react"
+import { Camera, ShieldCheck, Wifi, Satellite, KeyRound, DoorOpen, Package, MessageCircle, Mail, Send, Phone } from "lucide-react"
 
 const links = [
   {
@@ -39,7 +39,7 @@ const links = [
     title: "Домофония",
     description: "Видеодомофоны и переговорные устройства",
     href: "#",
-    icon: Intercom,
+    icon: DoorOpen,
   },
   {
     title: "Подбор и доставка оборудования",
