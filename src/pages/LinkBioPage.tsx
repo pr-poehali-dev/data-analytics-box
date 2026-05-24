@@ -2,38 +2,56 @@ import { motion } from "framer-motion"
 import { ProfileSection } from "@/components/ProfileSection"
 import { LinkCard } from "@/components/LinkCard"
 import { SocialFooter } from "@/components/SocialFooter"
-import { Camera, MessageCircle, Mail, Phone, FileText, Send, Star } from "lucide-react"
+import { Camera, ShieldCheck, Wifi, Satellite, KeyRound, Intercom, Package, MessageCircle, Mail, Send, Phone } from "lucide-react"
 
 const links = [
   {
-    title: "Сообщество ВКонтакте",
-    description: "Все об установке видеонаблюдения",
+    title: "Видеонаблюдение",
+    description: "IP-камеры, регистраторы, монтаж под ключ",
     href: "#",
     icon: Camera,
   },
   {
-    title: "Рассчитать стоимость",
-    description: "Бесплатный выезд и оценка объекта",
+    title: "Охранная сигнализация",
+    description: "Защита дома, офиса, склада",
     href: "#",
-    icon: FileText,
+    icon: ShieldCheck,
   },
   {
-    title: "Написать в WhatsApp",
-    description: "Ответим в течение 10 минут",
+    title: "Интернет 4G/LTE",
+    description: "Усиление сигнала и подключение в любой точке",
     href: "#",
-    icon: MessageCircle,
+    icon: Wifi,
   },
   {
-    title: "Позвонить нам",
-    description: "Работаем с 9:00 до 21:00",
+    title: "Спутниковый интернет",
+    description: "Двусторонний интернет там, где нет кабеля",
+    href: "#",
+    icon: Satellite,
+  },
+  {
+    title: "СКУД",
+    description: "Контроль и управление доступом",
+    href: "#",
+    icon: KeyRound,
+  },
+  {
+    title: "Домофония",
+    description: "Видеодомофоны и переговорные устройства",
+    href: "#",
+    icon: Intercom,
+  },
+  {
+    title: "Подбор и доставка оборудования",
+    description: "Помогаем выбрать и привезём с установкой",
+    href: "#",
+    icon: Package,
+  },
+  {
+    title: "Связаться с нами",
+    description: "Бесплатная консультация и выезд",
     href: "#",
     icon: Phone,
-  },
-  {
-    title: "Наши работы и отзывы",
-    description: "Примеры реализованных проектов",
-    href: "#",
-    icon: Star,
   },
 ]
 
@@ -73,13 +91,13 @@ const itemVariants = {
 export function LinkBioPage() {
   return (
     <main className="relative min-h-screen px-6 py-10 flex flex-col overflow-hidden">
-      <div className="fixed inset-0 z-0 bg-gradient-to-br from-slate-50 via-white to-slate-100" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900" />
 
       {/* Animated gradient orbs */}
       <motion.div
         className="fixed z-0 w-[500px] h-[500px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(147, 51, 234, 0.25) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(30, 100, 255, 0.3) 0%, transparent 70%)",
           filter: "blur(60px)",
           top: "-10%",
           left: "-10%",
@@ -99,7 +117,7 @@ export function LinkBioPage() {
       <motion.div
         className="fixed z-0 w-[600px] h-[600px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(0, 160, 255, 0.2) 0%, transparent 70%)",
           filter: "blur(80px)",
           top: "30%",
           right: "-20%",
@@ -119,7 +137,7 @@ export function LinkBioPage() {
       <motion.div
         className="fixed z-0 w-[450px] h-[450px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(0, 80, 200, 0.25) 0%, transparent 70%)",
           filter: "blur(70px)",
           bottom: "-5%",
           left: "20%",
@@ -139,7 +157,7 @@ export function LinkBioPage() {
       <motion.div
         className="fixed z-0 w-[350px] h-[350px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(0, 200, 255, 0.12) 0%, transparent 70%)",
           filter: "blur(50px)",
           top: "60%",
           left: "-5%",
@@ -156,50 +174,12 @@ export function LinkBioPage() {
         }}
       />
 
-      <motion.div
-        className="fixed inset-0 z-0 pointer-events-none opacity-60"
-        animate={{
-          background: [
-            "radial-gradient(ellipse 80% 60% at 20% 30%, rgba(255,255,255,0.6), transparent 50%), radial-gradient(ellipse 60% 80% at 80% 70%, rgba(255,255,255,0.4), transparent 50%)",
-            "radial-gradient(ellipse 80% 60% at 50% 20%, rgba(255,255,255,0.6), transparent 50%), radial-gradient(ellipse 60% 80% at 30% 80%, rgba(255,255,255,0.4), transparent 50%)",
-            "radial-gradient(ellipse 80% 60% at 80% 40%, rgba(255,255,255,0.6), transparent 50%), radial-gradient(ellipse 60% 80% at 60% 60%, rgba(255,255,255,0.4), transparent 50%)",
-            "radial-gradient(ellipse 80% 60% at 20% 30%, rgba(255,255,255,0.6), transparent 50%), radial-gradient(ellipse 60% 80% at 80% 70%, rgba(255,255,255,0.4), transparent 50%)",
-          ],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-
-      <motion.div
-        className="fixed z-0 pointer-events-none"
-        style={{
-          width: "200%",
-          height: "100px",
-          background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
-          transform: "rotate(-35deg)",
-          top: "20%",
-          left: "-50%",
-        }}
-        animate={{
-          left: ["-50%", "100%"],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-          repeatDelay: 4,
-        }}
-      />
-
       {/* Noise texture overlay */}
       <div
         className="pointer-events-none fixed inset-0 z-[1]"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-          opacity: 0.025,
+          opacity: 0.03,
         }}
       />
 
@@ -211,22 +191,23 @@ export function LinkBioPage() {
       >
         <motion.div variants={itemVariants} className="pt-2">
           <ProfileSection
-            name="Видеонаблюдение"
-            bio="Профессиональная установка систем видеонаблюдения 🎥 Квартиры, офисы, склады, частные дома"
-            imageUrl="/images/544291433-18043960274659947-5766591717842883293-n.jpg"
+            name="СтройСвязь"
+            bio="Монтаж и обслуживание систем безопасности и связи · Выезд бесплатно"
+            imageUrl="https://cdn.poehali.dev/projects/b3d4cee9-fae6-4473-8338-05229e8aea08/files/41e6694e-4075-46ce-b620-178e30947d29.jpg"
+            dark
           />
         </motion.div>
 
         <motion.div className="space-y-3 py-8" variants={containerVariants}>
           {links.map((link) => (
             <motion.div key={link.title} variants={itemVariants}>
-              <LinkCard {...link} />
+              <LinkCard {...link} dark />
             </motion.div>
           ))}
         </motion.div>
 
         <motion.div variants={itemVariants} className="pb-2">
-          <SocialFooter socials={socials} copyright="2025 Видеонаблюдение" />
+          <SocialFooter socials={socials} copyright="2025 СтройСвязь" dark />
         </motion.div>
       </motion.div>
     </main>
